@@ -6,3 +6,9 @@ resource "aws_vpc" "myvpc" {
         Name = "myvpc"
     }
 }
+
+resource "aws_subnet" "pubsub01" {
+    vpc_id = aws_vpc.myvpc.id
+    cidr_block = "192.168.1.0/24"
+    availability_zone = "us-east-1a"
+}
