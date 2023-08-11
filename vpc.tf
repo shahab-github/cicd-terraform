@@ -12,3 +12,10 @@ resource "aws_subnet" "pubsub01" {
     cidr_block = "192.168.1.0/24"
     availability_zone = "us-east-1a"
 }
+
+resource "aws_subnet" "pubsub02" {
+    vpc_id = aws_vpc.myvpc.id
+    cidr_block = "192.168.2.0/24"
+    availability_zone = "us-east-1a"
+}
+
